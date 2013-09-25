@@ -363,7 +363,7 @@ describe Puppet::Type.type(:user) do
 
   describe "when setting shell" do
     before :each do
-      @shell_provider_class = described_class.provide(:shell_checker) do
+      @shell_provider_class = described_class.provide(:manages_shell) do
         has_features :manages_shell
         mk_resource_methods
         def create; end
