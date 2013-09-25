@@ -212,7 +212,7 @@ Puppet::Type.type(:user).provide :useradd, :parent => Puppet::Provider::NameServ
   end
 
   def create
-    if @resource.should(:shell)
+    if @resource[:shell]
       check_valid_shell
     end
      super
