@@ -419,7 +419,5 @@ describe Puppet::Type.type(:user).provider(:useradd) do
       resource[:shell] = 'LICENSE'
       lambda { provider.check_valid_shell }.should raise_error(Puppet::Error, /Shell LICENSE must be executable/)
     end
-
   end
-
 end
